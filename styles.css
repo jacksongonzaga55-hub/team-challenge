@@ -37,3 +37,11 @@
 .moving-ball{position:absolute!important;left:50%;top:50%;z-index:8;font-size:25px;animation:none!important;transition:left .78s cubic-bezier(.2,.8,.3,1),top .78s cubic-bezier(.2,.8,.3,1);filter:drop-shadow(0 3px 3px #0018);pointer-events:none}
 .moving-ball.ball-contested{transform:scale(1.25);filter:drop-shadow(0 0 8px #ffe15b)}
 @media(max-width:650px){.football-field{min-height:340px}.field-person{width:58px!important}.field-person .player-shirt{width:39px;height:39px}.field-person strong{max-width:64px;font-size:8px}.moving-ball{font-size:21px}}
+
+/* Movimentação coletiva: apoio, pressão e destaque de posse */
+.field-person{transition:left .58s ease,top .58s ease,filter .25s ease!important}
+.field-person.supporting{filter:drop-shadow(0 0 5px #53d8ff)}
+.field-person.pressing{filter:drop-shadow(0 0 6px #ff9d42)}
+.field-person.has-ball{z-index:9}
+.field-person.has-ball:after{content:"COM A BOLA";font-size:8px;font-weight:900;color:#ffe76b;background:#17200ddd;border-radius:5px;padding:2px 4px}
+.moving-ball{transition:left .58s ease,top .58s ease!important}
